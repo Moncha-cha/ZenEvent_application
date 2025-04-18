@@ -1,0 +1,19 @@
+.header-logo-container {
+    background-color: $logo-background;
+    background: radial-gradient(circle,rgb(40, 107, 102) 0%, rgba(142, 200, 218, 0.75) 100%);  
+    padding-top: 20px;     
+    padding-bottom: 20px;      
+    text-align: center; 
+    width: 100vw;
+   
+    
+}
+
+.logo-img {
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding-top: 20px;
+}
+

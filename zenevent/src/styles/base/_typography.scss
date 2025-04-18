@@ -6,7 +6,32 @@ body {
     
 }
 
+.headers-font {
+    font-family: $font-playwrite;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+  }
+
+  h1 {
+    font-family: $font-playwrite;
+    font-optical-sizing: auto;
+    font-size: 5em;
+    color: $zen-green;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: $header-shadow;
+}
+
+small {
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
     margin-bottom: 1rem;
 }

@@ -8,20 +8,28 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon.ico">
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <meta name="theme-color" content="#000000" />
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&display=swap" rel="stylesheet">
+ 
   <title>ZenEvent</title>
 </head>
 
-<body  class="container">
+<!-- Bootstrap JS (pro komponenty jako dropdown, modal...) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<body>
 
   <!-- LOGO -->
-  <div class="logo-container">
-    <img src="./Logo_zenEvent.png" alt="ZenEvent Logo">
+   
+  <div class="container-fluid header-logo-container">
+    <img src="./Logo_zenEvent.png" class="logo-img" alt="ZenEvent Logo">
   </div>
+  
+  
 
+<section class="container">
   <!-- Hlavní navigace / kotvy -->
   <nav>
-    <h1>ZenEvent</h1>
-    <p>Místo, kde si v klidu vytvoříte vlastní událost:</p>
+    <h1 class="headers-font">ZenEvent</h1>
+    <small class="text-body-secondary headers-font">Místo, kde si v klidu vytvoříte vlastní událost</small>
     <ul>
       <li><a href="#udalosti">Události</a></li>
       <li><a href="#navod">Návod</a></li>
@@ -138,6 +146,7 @@
       </div>
     </div>
   </main>
+</section>
 
   <!-- Footer -->
   <footer>
