@@ -17,3 +17,24 @@
     padding-top: 20px;
 }
 
+.custom-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.navbar {
+    
+    box-shadow: $header-shadow;
+    width: 100vw;
+    
+   .navbar-toggler {
+        margin-right: 3em;
+    }
+    
+    }
+
+   
+
+   
