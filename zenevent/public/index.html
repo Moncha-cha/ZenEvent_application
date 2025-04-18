@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/styles/main.css"> <!-- Vložení CSS souboru -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon.ico">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+  <title>ZenEvent</title>
+</head>
+
+<body  class="container">
+
+  <!-- LOGO -->
+  <div class="logo-container">
+    <img src="./Logo_zenEvent.png" alt="ZenEvent Logo">
+  </div>
+
+  <!-- Hlavní navigace / kotvy -->
+  <nav>
+    <h1>ZenEvent</h1>
+    <p>Místo, kde si v klidu vytvoříte vlastní událost:</p>
+    <ul>
+      <li><a href="#udalosti">Události</a></li>
+      <li><a href="#navod">Návod</a></li>
+      <li><a href="#tipy">Tipy</a></li>
+      <li><a href="#ome">O mě</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Druhy udalosti -->
+  <section class="event-section" id="events">
+    <div class="event-links">
+
+      <a href="#">
+        <div class="event-box event-trip">
+          Výlet s přáteli
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="event-box event-school">
+          Třídní sraz
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="event-box event-family">
+          Rodinná oslava
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="event-box event-custom">
+          Přizpůsobit si událost
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Clanky z navigace -->
+  <main>
+    <div class="main-container">
+      <div class="article-section" id="udalosti">
+        <h2>Události</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt.
+          Curabitur sagittis hendrerit ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos hymenaeos. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Duis viverra diam non justo. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Aliquam in
+          lorem
+          sit amet leo accumsan lacinia. In rutrum. Aliquam erat volutpat. Mauris elementum mauris vitae tortor.
+          Phasellus
+          rhoncus. Aenean fermentum risus id tortor.</p>
+      </div>
+      <div class="article-section" id="navod">
+        <h2>Návod</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          Mauris elementum mauris vitae tortor. Phasellus rhoncus. Aenean fermentum risus id tortor.</p>
+      </div>
+      <div class="article-section" id="tipy">
+        <h2>Tipy</h2>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos hymenaeos. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Duis viverra diam non justo. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Aliquam in
+          lorem
+          sit amet leo accumsan lacinia. In rutrum. Aliquam erat volutpat. Mauris elementum mauris vitae tortor.
+          Phasellus
+          rhoncus. Aenean fermentum risus id tortor.</p>
+      </div>
+      <div class="article-section" id="ome">
+        <h2>O mě</h2>
+        <p>Quisque tincidunt scelerisque libero. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Nunc
+          dapibus tortor vel mi dapibus
+          sollicitudin. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+          sed quia non numquam eius modi
+          tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nullam lectus justo, vulputate eget
+          mollis sed, tempor sed magna.
+          Maecenas libero. Nullam at arcu a est sollicitudin euismod. Sed vel lectus. Donec odio tempus molestie,
+          porttitor ut, iaculis quis, sem.
+          Suspendisse sagittis ultrices augue. Nunc auctor. Maecenas aliquet accumsan leo. Nulla turpis magna, cursus
+          sit amet, suscipit a,
+          interdum id, felis. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae
+          placerat pede sem sit
+          amet enim. Mauris suscipit, ligula sit amet pharetra semper,
+          nibh ante cursus purus, vel sagittis velit mauris vel metus. Phasellus faucibus molestie nisl.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Phasellus et lorem id felis nonummy placerat.</p>
+      </div>
+
+      <div class="article-section" id="kontakt">
+        <h2>Kontakt</h2>
+
+        <div class="contact-info">
+        <h3>Monika Lochmanová / ZenEvent creator</h3>
+        <p>Telefon: +420 776 655 169</p>
+        <p>E-mail: monikalochmanova1@gmail.com</p>
+        <p>Nebo mi napište jednoduše, přes formulář!</p>
+      </div>
+
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xjvjlqzj" method="POST">
+          <label for="name">Jméno:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Zpráva:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Odeslat</button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ZenEvent, Monika Lochmanová. Všechna práva vyhrazena.</p>
+    <p>Vytvořeno s láskou.</p>
+    <p>Vytvořeno pomocí Reactu, Node.js, HTML, SCSS a JavaScriptu.</p>
+  </footer>
+  <!-- Vložení JavaScript souboru -->
+
+ 
+
+
+  <!-- Místo, kde bude React aplikace vykreslena -->
+
+
+  <div id="root"></div>
+</body>
+
+</html>
