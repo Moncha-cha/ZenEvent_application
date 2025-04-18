@@ -31,6 +31,9 @@ Použila jsem komponentový přístup, aby byl kód přehledný a snadno rozši�
 Spuštění projektu:
 
 Úspěšně jsem spustila aplikaci v režimu vývoje (npm start) a ověřila, že vše funguje.
+
+Nasazení Bootstrap, stylování, proměnné a hlavička
+
 Technologie a nástroje:
 Frontend: React, HTML5, SCSS
 Nástroje: npm, Visual Studio Code
