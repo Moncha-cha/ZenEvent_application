@@ -54,9 +54,12 @@
   
     span {
       position: absolute;
-      bottom: 135px;
-      left: 0;
+      bottom: 50px;
       width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      text-align: center;
       color: rgb(5, 53, 53);
       font-family: $font-playwrite;
       font-size: 1.8em;
