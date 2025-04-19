@@ -32,7 +32,7 @@ Spuštění projektu:
 
 Úspěšně jsem spustila aplikaci v režimu vývoje (npm start) a ověřila, že vše funguje.
 
-Nasazení Bootstrap, stylování, proměnné a hlavička
+Nasazení Bootstrap, stylování, proměnné a hlavička/navigace/flower-menu/články/kontakt/formulář-Formspree/patička/odkazy.
 
 Technologie a nástroje:
 Frontend: React, HTML5, SCSS
