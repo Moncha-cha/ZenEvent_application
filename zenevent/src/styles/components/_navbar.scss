@@ -1,20 +1,40 @@
 .custom-nav {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Na menších zařízeních zobrazí navigaci jako sloupec */
+    justify-content: center; /* Vycentruje obsah */
+    align-items: center; /* Zarovná položky na střed */
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     padding: 1em 0;
-    text-transform: uppercase
-}
-
-.navbar {
-    
+    text-transform: uppercase;
+  
+    @media (min-width: 992px) { /* Na větších zařízeních */
+      flex-direction: row; /* Zobrazí navigaci jako řádek */
+      justify-content: space-around;
+    }
+  }
+  
+  .navbar {
     box-shadow: $header-shadow;
     width: 100vw;
-    
-   .navbar-toggler {
-        margin-right: 3em;
+  
+    .navbar-toggler {
+      z-index: 1050; /* Zajistí, že tlačítko toggleru je nad ostatními prvky */
+      margin-right: 1em; /* Přidá odsazení od pravého okraje */
     }
-    
+  
+    .navbar-collapse {
+      transition: height 0.35s ease; /* Zajistí plynulou animaci */
+      overflow: hidden; /* Skryje obsah při zavírání */
+      text-align: center; /* Zarovná obsah na střed */
     }
+  
+    .navbar-collapse.show {
+      height: auto; /* Zajistí, že se menu zobrazí */
+    }
+  
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
