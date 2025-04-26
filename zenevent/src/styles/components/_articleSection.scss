@@ -1,12 +1,13 @@
 .card {
-    background-color: #1aaa7386; /* Barva pozadí */
-    padding: 2rem; /* Vnitřní odsazení */
+    background-color: #1aaa7386; 
+    padding: 2rem; 
+    margin: 2rem;;
    
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animace při hoveru */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
   
     &:hover {
-      transform: translateY(-5px); /* Zvednutí při hoveru */
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Zvýrazněný stín při hoveru */
+      transform: translateY(-5px); 
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); 
     }
   
   
