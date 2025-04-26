@@ -6,6 +6,13 @@
     text-align: center; 
     width: 100vw;
    
+   
+
+    small {
+        font-size: 1.5em;
+        color: $zen-green;
+        text-shadow: $header-shadow;
+    }
     
 }
 
