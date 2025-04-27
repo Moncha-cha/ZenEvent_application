@@ -15,6 +15,8 @@ import PageTemplate from './pages/PageTemplate';
 
 function App() {
 
+  // return  <PageTemplate />
+
 
   return (
     <>
@@ -27,11 +29,9 @@ function App() {
         <ContactForm />
       </main>
 
-      <PageTemplate />
+     
 
       <Footer />
-
-      
 
       
     </>
