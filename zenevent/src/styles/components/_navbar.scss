@@ -3,7 +3,7 @@
     flex-direction: column; /* Na menších zařízeních zobrazí navigaci jako sloupec */
     justify-content: center; /* Vycentruje obsah */
     align-items: center; /* Zarovná položky na střed */
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 1 auto;
     width: 100%;
     padding: 1em 0;
@@ -17,11 +17,13 @@
   
   .navbar {
     box-shadow: $header-shadow;
-    width: 100vw;
+    width: 100%; /* Zajistí, že navigace zabírá celou šířku */
+    max-width: 1600px;
+    margin: 0 auto; /* Vycentruje navigaci */
   
     .navbar-toggler {
-      z-index: 1050; /* Zajistí, že tlačítko toggleru je nad ostatními prvky */
-      margin-right: 1em; /* Přidá odsazení od pravého okraje */
+      z-index: 1050; 
+      margin-right: 1em; 
     }
   
     .navbar-collapse {

@@ -1,5 +1,6 @@
 .contact-section {
   display: flex;
+  max-width: 1200px;
   flex-wrap: wrap; 
   justify-content: center; 
   gap: 2rem;
@@ -13,7 +14,7 @@
 }
 
 .contact-form {
-  flex: 1 1 600px; 
+  
   max-width: 600px; 
   width: 100%; 
 }
@@ -46,15 +47,17 @@ button {
   }
 }
 
-@media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column; 
-    align-items: center; 
-  }
-
+@media (max-width: 1200px){
   .contact-info,
   .contact-form {
-    flex: 1 1 100%; 
-    max-width: 100%; 
+    flex-direction: column;
   }
 }
+
+@media (min-width: 1200px) {
+  .contact-section {
+    flex-direction: row;
+  }
+
+}   
+// potrebuji poladit media, do 1200px aby byly pod sebou
