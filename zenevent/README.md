@@ -34,6 +34,36 @@ Spuštění projektu:
 
 Nasazení Bootstrap, stylování, proměnné a hlavička/navigace/flower-menu/články/kontakt/formulář-Formspree/patička/odkazy.
 
+Nyní převádím HTML do JSX, po převodu budu vytvářet jednotlivé komponenty hlavní stránky. Bude následovat:
+
+Převést HTML do React komponent
+
+ Přidat kontaktní formulář přes Formspree
+
+ Vytvořit vzorovou stránku Události
+
+ Duplikovat vzorovou stránku na 4 typy (Přátelé, Oslava, Sraz, Vlastní)
+
+ Nastavit React Router pro navigaci mezi stránkami
+
+ Přidat formulářová pole: datum, čas, místo, volitelný nadpis, popis
+
+ Přidat checkboxy pro účastníky
+
+ Vytvořit jednoduchý chat (localStorage)
+
+ Napojit chat na simulovanou lokální API
+
+ Udělat základní styling SCSS
+
+ Přizpůsobit stránku pro mobil/tablet/PC (responzivita)
+
+ Otestovat všechny funkce (formulář, router, chat, ukládání)
+
+ Opravit chyby a doladit detaily
+
+ Připravit projekt na odevzdání/prezentaci
+
 Technologie a nástroje:
 Frontend: React, HTML5, SCSS
 Nástroje: npm, Visual Studio Code
