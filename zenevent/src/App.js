@@ -8,6 +8,7 @@ import MainContent from './components/MainContent';
 import EventLink from './components/EventLink';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
+import PageTemplate from './pages/PageTemplate';
 
 
 
@@ -26,7 +27,13 @@ function App() {
         <ContactForm />
       </main>
 
+      <PageTemplate />
+
       <Footer />
+
+      
+
+      
     </>
   );
 }
