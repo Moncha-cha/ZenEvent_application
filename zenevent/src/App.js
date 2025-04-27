@@ -6,6 +6,9 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import MainContent from './components/MainContent';
 import EventLink from './components/EventLink';
+import Logo from './components/Logo';
+import Navigation from './components/HeaderText';
+import Header from './components/Header';
 
 
 
@@ -14,14 +17,7 @@ function App() {
 
   return (
    <>
-    <div className="container-fluid header-logo-container">
-    <img src="./Logo_zenEvent.png" className="logo-img" alt="ZenEvent Logo"/>
-    </div>
-
-    <h1 className='headers-font mt-4'>ZenEvent</h1>
-    <small className='text-body-secondary headers-font'>
-      Místo, kde si v klidu vytvoříte vlastní událost
-    </small>
+  <Header/> {/* Obsahuje <Logo/> a <Navigation/> */}
 
 
 
