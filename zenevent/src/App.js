@@ -2,7 +2,8 @@ import React from 'react';
 import './styles/main.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 
 
 
@@ -154,51 +155,12 @@ function App() {
       </section>
 
 
-      <section className="contact-section" id="kontakt">
-        <div className="contact-info">
-          <h2>Kontakt</h2>
-          <h3>Monika Lochmanová <br /> ZenEvent creator</h3>
-          <a href="tel:+420776655169">+420 776 655 169</a><br />
-          <a href="mailto:monikalochmanova1@gmail.com">monikalochmanova1@gmail.com</a><br /><br />
-          <p>Nebo mi napište jednoduše, přes formulář!</p>
-        </div>
+      <ContactForm />
 
-        <div className="contact-form">
-          <form action="https://formspree.io/f/xjvjlqzj" method="POST">
-            <label htmlFor="name">Jméno:</label>
-            <input type="text" id="name" name="name" required />
 
-            <label htmlFor="email">E-mail:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label htmlFor="message">Zpráva:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Odeslat</button>
-          </form>
-        </div>
-      </section>
   </main>
 
-  <footer className="footer">
-        <div className="footer-content">
-          <p>&copy; 2025 ZenEvent, Monika Lochmanová. Všechna práva vyhrazena.</p>
-          <p>Vytvořeno s láskou.</p>
-          <p>Vytvořeno pomocí Reactu, Node.js, HTML, SCSS a JavaScriptu.</p>
-
-          <div className="social-icons">
-            <a href="https://www.linkedin.com/in/monika-lochmanov%C3%A1-627941304/" target="_blank" aria-label="LinkedIn">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.facebook.com/public/Monika-Lochmanov%C3%A1/" target="_blank" aria-label="Facebook">
-              <i className="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/moncha_lo/" target="_blank" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
   
    </>
   );
