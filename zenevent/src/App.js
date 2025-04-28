@@ -9,13 +9,24 @@ import EventLink from './components/EventLink';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import PageTemplate from './pages/PageTemplate';
-
+import CustomEventPage from './pages/CustomEventPage';
+import ClassPage from './pages/ClassPage';
+import FamilyPage from './pages/FamilyPage';
+import TripPage from './pages/TripPage';
 
 
 
 function App() {
 
   // return  <PageTemplate />
+
+  return <TripPage />
+
+  // return <CustomEventPage />
+
+  // return <ClassPage />
+
+  // return <FamilyPage />
 
 
   return (
@@ -36,6 +47,6 @@ function App() {
       
     </>
   );
-}
+}  
 
 export default App;
