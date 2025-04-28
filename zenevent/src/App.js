@@ -18,9 +18,9 @@ import TripPage from './pages/TripPage';
 
 function App() {
 
-  // return  <PageTemplate />
+   return  <PageTemplate />
 
-  return <TripPage />
+  // return <TripPage />
 
   // return <CustomEventPage />
 
