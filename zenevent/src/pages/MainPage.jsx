@@ -5,6 +5,7 @@ import EventLink from "../components/EventLink";
 import MainContent from "../components/MainContent";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 
 const MainPage = () => {

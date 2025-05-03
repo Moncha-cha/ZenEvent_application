@@ -2,7 +2,7 @@ import React from "react";
 import PageTemplate from "./PageTemplate";
 
 
-const ClassPage = () => {
+const TripPage = () => {
     
   return (
     <PageTemplate
@@ -12,4 +12,4 @@ const ClassPage = () => {
   );
 };
 
-export default ClassPage;
+export default TripPage;

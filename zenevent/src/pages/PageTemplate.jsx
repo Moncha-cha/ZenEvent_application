@@ -3,7 +3,10 @@ import '../styles/components/_pageTemplate.scss';
 
 
 const PageTemplate = ({ imageUrl, eventTitle }) => {
-  console.log("PageTemplate: imageUrl ->", imageUrl);
+ // console.log("PageTemplate: imageUrl -", imageUrl);
+
+ const defaultImage = './template.jpg'; 
+ const defaultTitle = 'Událost';
 
   const [eventName, setEventName] = useState('');
   const [eventDescription, setEventDescription] = useState('');
@@ -30,13 +33,13 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
           {/* Pouzivam prop pro ruzna pozadi stranky */}
           <div
             className="background-image"
-            style={{ backgroundImage: `url(${imageUrl})` }}
+            style={{ backgroundImage: `url(${imageUrl || defaultImage})` }}
           ></div>
         </header>
 
         
 
-        <h1>{eventTitle}</h1>
+        <h1 className='title-header'>{eventTitle || defaultTitle}</h1>
 
         <div className="content">
           <div className="form-section">

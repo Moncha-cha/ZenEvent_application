@@ -1,37 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const EventLink = () => {
 
     return (
             <section className="event-flower" id="events">
         <div className="event-links">
-          <a href="#">
+          <Link to="/trip-with-friends">
             <div className="event-box event-trip">
               <img src="./trip_friends.jpg" alt="Výlet" className="event-icon trip-shape" />
               <span>Výlet s přáteli</span>
             </div>
-          </a>
+          </Link>
 
-          <a href="#">
+          <Link to="/class-reunion">
             <div className="event-box event-school">
               <img src="./reunion_class.jpg" alt="Výlet" className="event-icon school-shape" />
               <span>Třídní sraz</span>
             </div>
-          </a>
+            </Link>
 
-          <a href="#">
+          <Link to="/family-event">
             <div className="event-box event-family">
               <img src="./event_family.jpg" alt="Výlet" className="event-icon family-shape" />
               <span>Rodinná oslava</span>
             </div>
-          </a>
+            </Link>
 
-          <a href="#">
+          <Link to="/custom-event">
             <div className="event-box event-custom">
               <img src="./event_custom.jpg" alt="Výlet" className="event-icon custom-shape" />
               <span>Vlastní událost</span>
             </div>
-          </a>
+            </Link>
         </div>
       </section>
     );

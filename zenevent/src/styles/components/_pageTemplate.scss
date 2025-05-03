@@ -27,10 +27,8 @@
 }
 
 h1 {
-  text-align: center;
-  margin: 2rem 0 1rem;
-  font-weight: 700;
-  font-size: 2rem;
+  margin-top: 20px;
+  font-family: "Arial", sans-serif;
   color: #333;
 }
 
@@ -40,7 +38,7 @@ h1 {
   flex-wrap: wrap;
   gap: 2rem;
 
-  // Prohození stran
+  
   .event-details {
     flex: 1 1 45%;
     order: 1;
@@ -75,7 +73,7 @@ h1 {
     }
   }
 
-  // Speciální úprava pro účastníky
+  
   .form-group:has(input[type="text"]) {
     textarea {
       min-height: 150px;
