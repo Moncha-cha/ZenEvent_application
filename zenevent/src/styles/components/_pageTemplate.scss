@@ -1,82 +1,120 @@
-.page-header {
-  max-width: 900px; /* maximální šířka */
-  height: 200px; /* výška proužku */
-  background-size: cover;
-  background-position: center 80%; 
-  background-repeat: no-repeat;
+.page-template-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
 
-  .page-template-container {
-    max-width: 900px;
-  
+.page-template {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header {
+  position: relative;
+  height: 200px;
+
+  .background-image {
+    width: 100%; /* Nebo 100vw pro celou šířku viewportu */
+  height: 200px; /* Nastavte pevnou výšku */
+  background-size: cover; /* Obrázek pokryje celý prvek */
+  background-position: center; /* Obrázek bude vycentrován */
+  background-repeat: no-repeat;
   }
 }
 
+h1 {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #333;
+}
 
+.content {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 
-  
+  // Prohození stran
+  .event-details {
+    flex: 1 1 45%;
+    order: 1;
+  }
+
+  .form-section {
+    flex: 1 1 45%;
+    order: 2;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
     label {
       display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #495057;
     }
-  
-    input[type="date"],
-    input[type="time"],
-    input[type="text"],
+
+    input,
     textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 0.5rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.5rem;
     }
-  
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-  
-    ul {
-      list-style: none;
-      padding: 0;
-      li {
-        margin-bottom: 10px;
-      }
-    }
-  
-    .chat {
-      .chat-box {
-        max-height: 200px;
-        overflow-y: auto;
-        background-color: #fff;
-        padding: 10px;
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        border-radius: 4px;
-      }
-  
-      .chat-message {
-        padding: 5px 0;
-        border-bottom: 1px solid #eee;
-      }
-  
-      input[type="text"] {
-        margin-bottom: 10px;
-      }
-  
-      button {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
-      }
-    }
-  
 
-  
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  }
+
+  // Speciální úprava pro účastníky
+  .form-group:has(input[type="text"]) {
+    textarea {
+      min-height: 150px;
+    }
+  }
+
+  .chat-section {
+    flex: 1 1 100%;
+    margin-top: 2rem;
+
+    .chat-box {
+      height: 200px;
+      overflow-y: auto;
+      background-color: #f1f3f5;
+      border: 1px solid #ced4da;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .chat-message {
+        background-color: #e9ecef;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        margin-bottom: 0.5rem;
+        max-width: 75%;
+      }
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 1rem;
+
+      input {
+        flex: 1;
+      }
+
+      button {
+        white-space: nowrap;
+      }
+    }
+  }
+}

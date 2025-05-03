@@ -1,18 +1,15 @@
 import React from "react";
+import PageTemplate from "./PageTemplate";
 
 
-const TripPage = () => {
-    return (
-    <div className="page-template">
+const ClassPage = () => {
+    
+  return (
+    <PageTemplate
+      imageUrl={"./friends.jpg"} 
+      eventTitle={"Výlet s přáteli"}
+    />
+  );
+};
 
-        {/* Obrazek na uvodu */}
-        <header className="page-header">
-         <img src="/friends.jpg" alt="Background" className="background-image" />
-            </header>  
-            <h1>Vylet s prateli</h1>      
-    </div>
-
-    )
-}
-
-export default TripPage;
+export default ClassPage;
