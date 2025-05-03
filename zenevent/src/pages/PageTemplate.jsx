@@ -33,13 +33,13 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
           {/* Pouzivam prop pro ruzna pozadi stranky */}
           <div
             className="background-image"
-            style={{ backgroundImage: `url(${imageUrl || defaultImage})` }}
-          ></div>
+            style={{ backgroundImage: `url(${imageUrl || defaultImage})` }}  // || defaultImage
+            ></div>
         </header>
 
         
 
-        <h1 className='title-header'>{eventTitle || defaultTitle}</h1>
+        <h1 className='title-header'>{eventTitle || defaultTitle}</h1> {/* || Nastavuju pro vychozi */}
 
         <div className="content">
           <div className="form-section">
