@@ -18,6 +18,8 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
   const [showEventName, setShowEventName] = useState(false); // Stav pro zobrazení názvu
   const [showEventDescription, setShowEventDescription] = useState(false); // Stav pro zobrazení popisu
 
+  const [showDateTime, setShowDateTime] = useState(false); // Stav pro zobrazení data
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -42,6 +44,10 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
     setShowEventDescription(true); // Zobrazí popis pod názvem
   };
 
+  const handleSaveDateTime = () => {
+    setShowDateTime(true); // Zobrazí datum pod názvem
+  }
+
   return (
     <div className="page-template-container">
       <div className="page-template">
@@ -54,9 +60,15 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
 
         <h1 className="title-header">{eventTitle || defaultTitle}</h1>
 
-        {/* Zobrazení názvu a popisu pod hlavním nadpisem */}
+        {/* Zobrazení názvu a popisu pod hlavním nadpisem + datum a cas*/}
         {eventName && <h2 className="event-name">{eventName}</h2>}
         {eventDescription && <p className="event-description">{eventDescription}</p>}
+        {showDateTime && (
+  <div className="event-info">
+    <p><strong>Datum:</strong> {date}</p>
+    <p><strong>Čas:</strong> {time}</p>
+  </div>
+)}
 
         <div className="content">
           <div className="form-section">
@@ -118,26 +130,49 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
           </div>
 
           <div className="event-details">
-            <FormGroup
-              label="Datum"
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
-            <FormGroup
-              label="Čas"
-              type="time"
-              value={time}
-              onChange={(e) => setTime(e.target.value)}
-            />
-            <FormGroup
-              label="Účastníci"
-              type="text"
-              value={participants}
-              onChange={(e) => setParticipants(e.target.value)}
-              placeholder="Seznam účastníků"
-            />
-          </div>
+  {showDateTime ? (
+    <>
+      <p><strong>Datum:</strong> {date}</p>
+      <p><strong>Čas:</strong> {time}</p>
+      <button
+        className="btn btn-secondary"
+        onClick={() => setShowDateTime(false)}
+      >
+        Upravit datum a čas
+      </button>
+    </>
+  ) : (
+    <>
+      <FormGroup
+        label="Datum"
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+      />
+      <FormGroup
+        label="Čas"
+        type="time"
+        value={time}
+        onChange={(e) => setTime(e.target.value)}
+      />
+      <button
+        className="btn btn-primary"
+        onClick={handleSaveDateTime}
+      >
+        Uložit datum a čas
+      </button>
+    </>
+  )}
+  
+  <FormGroup
+    label="Účastníci"
+    type="text"
+    value={participants}
+    onChange={(e) => setParticipants(e.target.value)}
+    placeholder="Seznam účastníků"
+  />
+</div>
+
 
           <ChatBox
             messages={messages}
