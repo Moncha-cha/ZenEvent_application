@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/components/_pageTemplate.scss';
 import ChatBox from '../components/ChatBox';
 import FormGroup from '../components/FormGroup';
+import Footer from '../components/Footer';
 
 const PageTemplate = ({ imageUrl, eventTitle }) => {
   const defaultImage = './template.jpg';
@@ -46,12 +47,14 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
     const storedDescription = localStorage.getItem('eventDescription');
     const storedDate = localStorage.getItem('eventDate');
     const storedTime = localStorage.getItem('eventTime');
+    const storedParticipants = localStorage.getItem('participants');
 
     if (storedName) setEventName(storedName);
     if (storedDescription) setEventDescription(storedDescription);
     if (storedDate) setDate(storedDate);
     if (storedTime) setTime(storedTime);
     if (storedMessages) setMessages(JSON.parse(storedMessages));
+    if (storedParticipants) setParticipants(JSON.parse(storedParticipants));
 
     setIsInitialized(true);
   }, []);
@@ -64,8 +67,9 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
       localStorage.setItem('eventDescription', eventDescription);
       localStorage.setItem('eventDate', date);
       localStorage.setItem('eventTime', time);
+      localStorage.setItem('participants', JSON.stringify(participants));
     }
-  }, [messages, eventName, eventDescription, date, time, isInitialized]);
+  }, [participants, messages, eventName, eventDescription, date, time, isInitialized]);
 
   // Přidání nové zprávy
   const handleAddMessage = () => {
@@ -222,8 +226,11 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
 
             {/* Sekce pro úpravu účastníků */}
             <div className="participants">
+
               <label>Účastníci:</label>
+
               <div className="checkbox-group">
+
                 {/* Seznam účastníků s checkboxy */}
                 {participantsList.map((participant) => (
                   <div key={participant.id} className="checkbox-item">
@@ -242,9 +249,16 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
 
           </div>
         </div>
+{/* Footer komponenta */}
+        <Footer />
+
       </div>
     </div>
+
+    
   );
 };
+
+
 
 export default PageTemplate;

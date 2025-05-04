@@ -21,10 +21,10 @@
   height: 200px;
 
   .background-image {
-  width: 100%; /* Nebo 100vw pro celou šířku viewportu */
-  height: 200px; /* Nastavte pevnou výšku */
-  background-size: cover; /* Obrázek pokryje celý prvek */
-  background-position: center; /* Obrázek bude vycentrován */
+  width: 100%;
+  height: 200px; 
+  background-size: cover; 
+  background-position: center; 
   background-repeat: no-repeat;
   }
 }
@@ -174,12 +174,12 @@ h1 {
     .checkbox-group {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem; /* Mezera mezi jednotlivými checkboxy */
+      gap: 0.5rem; 
   
       .checkbox-item {
         display: flex;
-        align-items: center; /* Zarovnání checkboxu a textu na střed */
-        gap: 0.5rem; /* Mezera mezi checkboxem a textem */
+        align-items: center; 
+        gap: 0.5rem; 
   
         input[type="checkbox"] {
           width: 16px;
