@@ -160,5 +160,40 @@ h1 {
   
      
   }
-
+  
+  div.participants {
+    margin-top: 2rem;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #495057;
+    padding: 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.5rem;
+  
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem; /* Mezera mezi jednotlivými checkboxy */
+  
+      .checkbox-item {
+        display: flex;
+        align-items: center; /* Zarovnání checkboxu a textu na střed */
+        gap: 0.5rem; /* Mezera mezi checkboxem a textem */
+  
+        input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+          appearance: auto;  // zajistilo vychozi chovani checkboxu
+        }
+  
+        label {
+          font-size: 1rem;
+          color: #247564;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

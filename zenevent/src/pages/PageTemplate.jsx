@@ -11,7 +11,7 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
   const [eventDescription, setEventDescription] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [participants, setParticipants] = useState('');
+  const [participants, setParticipants] = useState([]);
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [showEventName, setShowEventName] = useState(false);
@@ -117,17 +117,17 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
           </div>
         )}
 
-          
+
 
         <div className="content">
 
           {/* Chatbox komponenta */}
           <ChatBox
-              messages={messages}
-              message={message}
-              setMessage={setMessage}
-              handleAddMessage={handleAddMessage}
-            />
+            messages={messages}
+            message={message}
+            setMessage={setMessage}
+            handleAddMessage={handleAddMessage}
+          />
           <div className="form-section">
             {/* Sekce pro úpravu názvu */}
             {showEventName ? (
@@ -218,15 +218,15 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
               </>
             )}
 
-          
+
 
             {/* Sekce pro úpravu účastníků */}
             <div className="participants">
-              <label>Účastníci</label>
+              <label>Účastníci:</label>
               <div className="checkbox-group">
                 {/* Seznam účastníků s checkboxy */}
                 {participantsList.map((participant) => (
-                  <div key={participant.id}>
+                  <div key={participant.id} className="checkbox-item">
                     <input
                       type="checkbox"
                       value={participant.name}
@@ -239,12 +239,12 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
               </div>
             </div>
 
-            
+
           </div>
         </div>
       </div>
-      </div>
-      );
+    </div>
+  );
 };
 
-      export default PageTemplate;
+export default PageTemplate;
