@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/components/_pageTemplate.scss";
 
 const FormGroup = ({ label, type, value, onChange, placeholder }) => {
   return (

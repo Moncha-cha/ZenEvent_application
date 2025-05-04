@@ -62,12 +62,14 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
           <div className="form-section">
             {/* Sekce pro úpravu názvu */}
             {showEventName ? (
+              
               <button
                 className="btn btn-secondary" // Sekundární styl tlačítka
                 onClick={() => setShowEventName(false)}
               >
                 Upravit název
               </button>
+              
             ) : (
               <>
                 <FormGroup
@@ -88,12 +90,14 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
 
             {/* Sekce pro úpravu popisu */}
             {showEventDescription ? (
+              
               <button
                 className="btn btn-secondary" // Sekundární styl tlačítka
                 onClick={() => setShowEventDescription(false)}
               >
                 Upravit popis
               </button>
+              
             ) : (
               <>
                 <FormGroup
