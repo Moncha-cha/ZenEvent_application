@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/components/_pageTemplate.scss';
-
+import ChatBox from '../components/ChatBox';
+import FormGroup from '../components/FormGroup';
 
 const PageTemplate = ({ imageUrl, eventTitle }) => {
- // console.log("PageTemplate: imageUrl -", imageUrl);
-
- const defaultImage = './template.jpg'; 
- const defaultTitle = 'Událost';
+  const defaultImage = './template.jpg';
+  const defaultTitle = 'Událost';
 
   const [eventName, setEventName] = useState('');
   const [eventDescription, setEventDescription] = useState('');
@@ -16,109 +15,84 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleAddMessage = () => {
-    setMessages([...messages, message]);
-    setMessage('');
+    if (message.trim() !== '') {
+      const currentDateTime = new Date().toLocaleString('cs-CZ', {
+        dateStyle: 'short',
+        timeStyle: 'short',
+      });
+
+      setMessages([...messages, { text: message, time: currentDateTime }]);
+      setMessage('');
+    }
   };
 
-
-
   return (
-
-
     <div className="page-template-container">
       <div className="page-template">
         <header className="page-header">
-
-          {/* Pouzivam prop pro ruzna pozadi stranky */}
           <div
             className="background-image"
-            style={{ backgroundImage: `url(${imageUrl || defaultImage})` }}  // || defaultImage
-            ></div>
+            style={{ backgroundImage: `url(${imageUrl || defaultImage})` }}
+          ></div>
         </header>
 
-        
-
-        <h1 className='title-header'>{eventTitle || defaultTitle}</h1> {/* || Nastavuju pro vychozi */}
+        <h1 className="title-header">{eventTitle || defaultTitle}</h1>
 
         <div className="content">
           <div className="form-section">
-            {/* Formulář pro datum, čas a účastníky */}
-            <div className="form-group">
-              <label>Datum</label>
-              <input
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Čas</label>
-              <input
-                type="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Účastníci</label>
-              <input
-                type="text"
-                value={participants}
-                onChange={(e) => setParticipants(e.target.value)}
-                placeholder="Seznam účastníků"
-              />
-            </div>
+            <FormGroup
+              label="Datum"
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+            <FormGroup
+              label="Čas"
+              type="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+            />
+            <FormGroup
+              label="Účastníci"
+              type="text"
+              value={participants}
+              onChange={(e) => setParticipants(e.target.value)}
+              placeholder="Seznam účastníků"
+            />
           </div>
 
           <div className="event-details">
-            {/* Název a popis akce */}
-            <div className="form-group">
-              <label>Název akce</label>
-              <input
-                type="text"
-                value={eventName}
-                onChange={(e) => setEventName(e.target.value)}
-                placeholder="Zadejte název akce"
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Popis akce</label>
-              <textarea
-                value={eventDescription}
-                onChange={(e) => setEventDescription(e.target.value)}
-                placeholder="Zadejte popis akce"
-              />
-            </div>
+            <FormGroup
+              label="Název akce"
+              type="text"
+              value={eventName}
+              onChange={(e) => setEventName(e.target.value)}
+              placeholder="Zadejte název akce"
+            />
+            <FormGroup
+              label="Popis akce"
+              type="textarea"
+              value={eventDescription}
+              onChange={(e) => setEventDescription(e.target.value)}
+              placeholder="Zadejte popis akce"
+            />
           </div>
 
-          <div className="chat-section">
-            {/* Chat */}
-            <div className="chat-box">
-              {messages.map((msg, index) => (
-                <div key={index} className="chat-message">
-                  {msg}
-                </div>
-              ))}
-            </div>
-            <div className="chat-input">
-              <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Napište zprávu..."
-              />
-              <button onClick={handleAddMessage}>Odeslat</button>
-            </div>
-          </div>
+          <ChatBox
+            messages={messages}
+            message={message}
+            setMessage={setMessage}
+            handleAddMessage={handleAddMessage}
+          />
         </div>
       </div>
     </div>
   );
 };
-
 
 export default PageTemplate;
