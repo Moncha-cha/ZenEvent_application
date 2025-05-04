@@ -20,9 +20,59 @@ const PageTemplate = ({ imageUrl, eventTitle }) => {
 
   const [showDateTime, setShowDateTime] = useState(false); // Stav pro zobrazení data
 
+  const [isInitialized, setIsInitialized] = useState(false); // Stav pro inicializaci
+
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Posun na začátek stránky při načtení
+
+// lokal storage na zpravy / nacitani a ukladani
+    const storedMessages = localStorage.getItem("chatMessages");
+    const storedName = localStorage.getItem("eventName");
+if (storedName) setEventName(storedName);
+
+const storedDescription = localStorage.getItem("eventDescription");
+if (storedDescription) setEventDescription(storedDescription);
+
+const storedDate = localStorage.getItem("eventDate");
+if (storedDate) setDate(storedDate);
+
+const storedTime = localStorage.getItem("eventTime");
+if (storedTime) setTime(storedTime);
+    if (storedMessages) {
+      setMessages(JSON.parse(storedMessages));
+    }
+    setIsInitialized(true); // Nastavení stavu inicializace na true
   }, []);
+
+  useEffect(() => {
+    if (isInitialized)
+    localStorage.setItem("chatMessages", JSON.stringify(messages));
+  }
+  , [messages, isInitialized]); // Uložení zpráv do localStorage při změně messages
+
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem("eventName", eventName);
+    }
+  }, [eventName, isInitialized]);
+  
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem("eventDescription", eventDescription);
+    }
+  }, [eventDescription, isInitialized]);
+  
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem("eventDate", date);
+    }
+  }, [date, isInitialized]);
+  
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem("eventTime", time);
+    }
+  }, [time, isInitialized]);
 
   const handleAddMessage = () => {
     if (message.trim() !== '') {
