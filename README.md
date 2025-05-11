@@ -1,50 +1,75 @@
-🧭 ZenEvent – Plan events simply and in style
-A single-page web app for managing personal and group events.
+ZenEvent – Webová aplikace pro správu společných událostí
+Popis projektu:
+ZenEvent je jednoduchá webová aplikace, která uživatelům umožňuje vytvářet a spravovat různé typy událostí, jako jsou rodinné oslavy, třídní srazy nebo výlety s přáteli. Projekt je postaven na Reactu a SCSS.
 
-ZenEvent is a modern SPA built with React and SCSS, enabling users to create, plan, and share various types of events – from trips to private celebrations. The focus is on simplicity, clarity, and intuitive UX.
+Co jsem zatím v projektu zvládla a co bude dál přibývat:
+Nastavení projektu:
 
-🛠 Tech stack and structure:
+Inicializovala jsem projekt pomocí Create React App (CRA).
+Vytvořila jsem přehlednou strukturu složek:
+components – pro jednotlivé React komponenty.
+pages – pro stránky aplikace.
+scripts – pro pomocné funkce a logiku.
+styles – pro SCSS soubory.
+Styling pomocí SCSS:
 
-React + React Router DOM for dynamic routing without page reloads
+Použila jsem SCSS pro lepší organizaci stylů:
+Proměnné – Definovala jsem barvy a fonty v variables.scss.
+Mixiny – Vytvořila jsem znovupoužitelné mixiny v mixins.scss.
+Reset stylů – Přidala jsem resetovací styly pro konzistenci napříč prohlížeči.
+Komponentové styly – Každá komponenta má svůj vlastní SCSS soubor (např. navbar.scss, footer.scss).
+Frontend vývoj:
 
-SCSS with BEM for maintainable and scalable styling
+Vytvořila jsem základní strukturu aplikace:
+Navigace – Jednoduché menu s odkazy na sekce jako "Události", "Návod", "Kontakt".
+Sekce událostí – Přidala jsem boxy pro různé typy událostí (např. "Rodinná oslava").
+Kontaktní formulář – Přidala jsem formulář s validací povinných polí.
+Práce s Reactem:
 
-Bootstrap (via npm) for responsive layout and base styling
+Vytvořila jsem hlavní komponentu App.jsx a připojila ji k index.js.
+Použila jsem komponentový přístup, aby byl kód přehledný a snadno rozšiřitelný.
+Spuštění projektu:
 
-JavaScript (ES6) for interactivity
+Úspěšně jsem spustila aplikaci v režimu vývoje (npm start) a ověřila, že vše funguje.
 
-Node.js + npm as the development environment
+Nasazení Bootstrap, stylování, proměnné a hlavička/navigace/flower-menu/články/kontakt/formulář-Formspree/patička/odkazy.
 
-Parcel as a lightweight bundler
+Nyní převádím HTML do JSX, po převodu budu vytvářet jednotlivé komponenty hlavní stránky. Bude následovat:
 
-Modular folder structure (components/, pages/, styles/, assets/)
+Převést HTML do React komponent
 
-Basic use of localStorage to simulate backend features (e.g. event chat)
+ Přidat kontaktní formulář přes Formspree
 
-📁 Ready for integration with a database or backend (Firebase, Express, MongoDB, etc.)
+ Vytvořit vzorovou stránku Události
 
+ Duplikovat vzorovou stránku na 4 typy (Přátelé, Oslava, Sraz, Vlastní)
 
- 🧭 ZenEvent – Plánování událostí jednoduše a stylově
-Single-page webová aplikace pro správu osobních i společenských událostí.
+ Nastavit React Router pro navigaci mezi stránkami
 
-ZenEvent je moderní webová aplikace postavená pomocí Reactu a SCSS, která umožňuje uživatelům vytvářet, plánovat a sdílet různé typy událostí – od výletů po soukromé akce. Cílem je jednoduchost, přehlednost a intuitivní ovládání.
+ Přidat formulářová pole: datum, čas, místo, volitelný nadpis, popis
 
-🛠 Použité technologie a přístupy:
+ Přidat checkboxy pro účastníky
 
-React + React Router DOM pro komponentový přístup a správu „stránek“ bez reloadu
+ Vytvořit jednoduchý chat (localStorage)
 
-SCSS + BEM naming pro strukturované a udržitelné styly
+ Napojit chat na simulovanou lokální API
 
-Bootstrap (přes npm) pro rychlou responzivní základnu
+ Udělat základní styling SCSS
 
-JavaScript (ES6) pro interaktivitu
+ Přizpůsobit stránku pro mobil/tablet/PC (responzivita)
 
-Node.js + npm jako build systém a balíčkovací nástroj
+ Otestovat všechny funkce (formulář, router, chat, ukládání)
 
-Parcel pro jednoduchý a rychlý bundling
+ Opravit chyby a doladit detaily
 
-Modulární struktura složek pro přehlednost (např. components/, pages/, styles/, assets/)
+ Připravit projekt na odevzdání/prezentaci
 
-Základní práce s localStorage (simulace backendu / chatu)
+Technologie a nástroje:
+Frontend: React, HTML5, SCSS
+Nástroje: npm, Visual Studio Code
+Další: Git pro verzování
 
-📁 Projekt je připraven k napojení na back-end nebo databázi (např. Firebase, Express, MongoDB).
+Co bych chtěla dále rozvíjet:
+Přidat dynamický obsah pomocí React state managementu.
+Připojit aplikaci k lokální i veřejné API pro ukládání a načítání dat.
+Možná - optimalizovat aplikaci pro produkční prostředí.
