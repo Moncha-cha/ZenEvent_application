@@ -1,0 +1,16 @@
+Zenevent - Seznam Ukolu
+
+- [ ] Prevest HTML do React komponent
+- [ ] Pridat kontaktni formular pres Formspree
+- [ ] Vytvorit vzorovou stranku Udalosti
+- [ ] Duplikovat vzorovou stranku na 4 typy (Pratele, Oslava, Sraz, Vlastni)
+- [ ] Nastavit React Router pro navigaci mezi strankami
+- [ ] Pridat formularova pole: datum, cas, misto, volitelny nadpis, popis
+- [ ] Pridat checkboxy pro ucastniky
+- [ ] Vytvorit jednoduchy chat (localStorage)
+- [ ] Napojit chat na simulovanou lokalni API
+- [ ] Udelat zakladni styling SCSS
+- [ ] Prizpusobit stranku pro mobil/tablet/PC (responzivita)
+- [ ] Otestovat vsechny funkce (formular, router, chat, ukladani)
+- [ ] Opravit chyby a doladit detaily
+- [ ] Pripravit projekt na odevzdani/prezentaci
