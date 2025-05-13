@@ -1,5 +1,6 @@
 import React from "react";
 import PageTemplate from "./PageTemplate";
+import Footer from "../components/Footer";
 
 
 const CustomEventPage = () => {
@@ -8,7 +9,9 @@ const CustomEventPage = () => {
     <PageTemplate
       imageUrl={"./custom.jpg"} 
       eventTitle={"Vlastní akce"}
+      
     />
+    
   );
 };
 
